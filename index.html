@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics Equation Solver</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.14/nerdamer.core.min.js" integrity="sha512-O8qMLfwbhnqgI2KxLC+obr+DKpqKSXK7x7OJ4IvBjuQ3EiUpUPzknOUJ5tyoXKkDNkY0E/6zXlU8DcuWBDqjQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.14/Algebra.js" integrity="sha512-bg9sglsVxLLeG8Om73plZsaBlImP2EjF6nYxY5PDv6w6xvvs76dEfZtCphVoprGb5fhz4bXE4/mfE0Ph8+o9hQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.14/Calculus.js" integrity="sha512-gO6bFCLHqW4Vo5Geo8ojlRD6W7tF5Q5K3+qx8miSJlgqO1kDzEGz7MHQy9X9iabf8vpy/8G6zgmD9Y1ymzn2PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.14/Solve.js" integrity="sha512-LW+qQsGVw97hu+0nq8Wc8dfDcpAi0/HVZmkJ8uQfXbGFX3J0fUN0L2pA9JCYuLRO6Ga8RT1EH3e1FSEsbGon3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Physics Equation Solver</h1>
+      <p>Enter a physics equation and known values, then solve for the missing variable.</p>
+    </header>
+
+    <section class="card">
+      <label for="equation">Physics equation</label>
+      <textarea id="equation" placeholder="e.g. F = m * a">F = m * a</textarea>
+
+      <label for="values">Known values</label>
+      <input id="values" placeholder="e.g. m=2, a=3" value="m=2, a=3" />
+
+      <label for="solveFor">Solve for</label>
+      <input id="solveFor" placeholder="e.g. F" value="F" />
+
+      <button id="solveBtn">Solve equation</button>
+
+      <div id="result" class="result"></div>
+    </section>
+
+    <section class="card examples">
+      <h2>Example inputs</h2>
+      <ul>
+        <li><strong>F = m * a</strong>, values: <code>m=5, a=9.81</code>, solve for <code>F</code></li>
+        <li><strong>v^2 = u^2 + 2 a s</strong>, values: <code>u=0, a=9.81, s=10</code>, solve for <code>v</code></li>
+        <li><strong>p V = n R T</strong>, values: <code>n=1, R=8.314, T=300, V=0.025</code>, solve for <code>p</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
